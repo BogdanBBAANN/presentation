@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogdan Ban</title>
+    <style>
+        .content { 
+            display: none;
+            padding-left: 10%;
+            padding-right: 10%; 
+        }
+
+        #home, #education {
+            flex-direction: column;
+        }
+
+        #experience {
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            display: flex;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .nav-wrapper {
+            top: 0;
+            margin: 10px;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            justify-content: center;
+            background-color: white;
+        }
+
+        .navbar-items {
+            flex-direction: row;
+            padding-left: 10px;
+            padding-right: 10px;
+            align-items: center;
+        }
+
+        .navbar-text {
+            font-size: 20px;
+            display: flex;
+        }
+
+        .logo {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            border-radius: 30%;
+        }
+
+        .profile {
+            width: 40%;
+            align-self: center;
+        }
+
+        #myBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 20px; 
+            right: 30px; 
+            z-index: 99;    
+            background-color: white;
+            cursor: pointer;
+            padding: 20px; 
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+            }
+
+        .skills-list > li {
+            border: 1px black solid;
+            border-radius: 10px;
+            padding: 1px 2px 1px 2px;
+            margin-left: 1px;
+            margin-right: 1px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-wrapper">
+    <nav class="navbar-container">
+            <div class="navbar-items">
+                <a href="#" onclick="showPage('home')">
+                    <img class="logo" src="/logo/logo.PNG" />
+                </a>
+            </div>
+            <div class="navbar-items navbar-text">
+                <a href="#" onclick="showPage('experience')">Experience</a>
+            </div>
+            <div class="navbar-items navbar-text">
+                <a href="#" onclick="showPage('education')">Education</a>
+            </div>
+            <div class="navbar-items navbar-text">
+                <a href="#" onclick="showPage('hobbies')">Hobbies</a>
+            </div>
+            <div class="navbar-items navbar-text">
+                <a href="#" onclick="showPage('contact')">Contact</a>
+            </div>
+    </nav>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+
+    <div id="home" class="content">
+        <h2>Welcome to my site!</h2>
+        <img class="profile" src="./logo/profile.jfif" alt="image here"/>
+        <p style="text-align: justify;">I am a full stack developer with over 3 year experience in Web development, passionate about technology and coding, eager to contribute to exciting projects and improve constantly.
+        </p>
+        <p><b>Skills:</b>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <img style="width: 54px; height: 50px;" src="./logo/big_smile.png" alt="big_smile">
+                <ul class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
+                    <li>JS(ES6)/TS</li>
+                    <li>HTML5</li> <li>CSS</li> <li>React</li> <li>NestJs</li> <li>Websockets</li> 
+                    <li>Jest</li> <li>SQL</li> <li>Docker</li> <li>Git</li> <li>Ensligh C1</li>
+                    <li>Communication</li>
+                </ul>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <img style="width: 50px; height: 50px;" src="./logo/smile.png" alt="smile">
+                <ul class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
+                    <li>Python</li>
+                    <li>Django</li> <li>Vue3</li> <li>MongoDb</li> <li>Docker</li> 
+                    <li>RabbitMQ</li> <li>gRPC</li> <li>Cypress</li> <li>Linux</li>
+                    <li>C/C++</li> <li>Presentation</li>
+                </ul>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <img style="width: 50px; height: 50px;" src="./logo/serious.png" alt="serious">
+                <ul class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
+                    <li>AWS</li>
+                </ul>
+            </div>
+        </p>
+    </div>
+    <div id="experience" class="content">
+        <h3 style="border-bottom: 1px black solid;">Software engineer at Betfair Romania Development (Flutter International) (2023 - present)</h3>
+        <div>
+            <p><b>Project: </b> Flutter Studios Platform for Online Gambling</p>
+            <p><b>Tech stack:</b> React NestJs JavaScript/TypeScript</p>
+            <p><b>Responsabilities:</b>
+                <ul>
+                    <li>contributed to the component that was responsible for rendering the games</li>
+                    <li>developed reusable UI components in React</li>
+                    <li>participated in code reviews & tech discussions</li>
+                    <li>wrote testable and maintainable solutions to solve different software problems</li>
+                    <li>wrote unit tests using jest</li>
+                </ul>
+            </p>
+        </div>
+        <br/>
+        <h3 style="border-bottom: 1px black solid;">
+            Software engineer at Bosch Engineering Cluj (2021 - 2023)
+        </h3>
+        <div>
+            <p><b>Project: </b> Pantaris Fleet Organizer project</p>
+            <p><b>Tech stack:</b> Vue3 NestJs JavaScript/TypeScript MongoDb</p>
+            <p><b>Responsabilities:</b>
+                <ul>
+                    <li>developed reusable UI components in Vue
+                    </li>
+                    <li>used Pinia for state management
+                    </li>
+                    <li>created basic CRUD operations on resources
+                    </li>
+                    <li>wrote github actions for automation</li>
+                    <li>wrote cypress tests</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div id="education" class="content">
+        <h3 style="border-bottom: 1px black solid;">Technical University of Cluj-Napoca</h3>
+        <p style="margin-top: 0;">Bachelor's degree in Computer Science and Information Technology (2017-2021)</p>
+        <h3 style="border-bottom: 1px black solid;">Mihai Eminescu National College Satu-Mare</h3>
+        <p style="margin-top: 0;">Mathematics-informatics profile (2013-2017)</p>
+    </div>
+    <div id="hobbies" class="content">
+        <h2>Hobbies</h2>
+        <p>This is the hobbies page.</p>
+    </div>
+    <div id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>Contact details go here.</p>
+    </div>
+
+
+    <script>
+        const nav = document.querySelector('.navbar-container');
+        
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        function showPage(page) {
+            var pages = document.querySelectorAll('.content');
+            pages.forEach(function(p) {
+                p.style.display = 'none';
+            });
+
+            document.getElementById(page).style.display = 'flex';
+        }
+
+        showPage('home');
+    </script>
+</body>
+</html>
