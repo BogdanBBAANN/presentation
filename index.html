@@ -11,11 +11,12 @@
             padding-right: 10%; 
         }
 
-        #home, #education {
+        #home, #education, #experience {
             flex-direction: column;
         }
 
-        #experience {
+        #contact {
+            justify-content: center;
             flex-direction: column;
         }
 
@@ -106,16 +107,12 @@
                 <a href="#" onclick="showPage('education')">Education</a>
             </div>
             <div class="navbar-items navbar-text">
-                <a href="#" onclick="showPage('hobbies')">Hobbies</a>
-            </div>
-            <div class="navbar-items navbar-text">
                 <a href="#" onclick="showPage('contact')">Contact</a>
             </div>
     </nav>
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-
 
     <div id="home" class="content">
         <h2>Welcome to my site!</h2>
@@ -191,15 +188,11 @@
         <h3 style="border-bottom: 1px black solid;">Mihai Eminescu National College Satu-Mare</h3>
         <p style="margin-top: 0;">Mathematics-informatics profile (2013-2017)</p>
     </div>
-    <div id="hobbies" class="content">
-        <h2>Hobbies</h2>
-        <p>This is the hobbies page.</p>
-    </div>
     <div id="contact" class="content">
-        <h2>Contact Us</h2>
-        <p>Contact details go here.</p>
+        <p><b>Email:</b> utility.email.bba@gmail.com
+        </p>
+        <p><a href="https://www.linkedin.com/in/bogdan-ban-90aa59159/" target="_blank"> <b>Linkedin</b></a></p>
     </div>
-
 
     <script>
         const nav = document.querySelector('.navbar-container');
