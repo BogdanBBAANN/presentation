@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bogdan Ban</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playwrite+IN:wght@100..400&family=Playwrite+NZ+Guides&display=swap');
+
         .content {
             display: none;
             padding-left: 10%;
@@ -18,18 +21,31 @@
             flex-direction: column;
         }
 
+        #home {
+            padding: 0 25vw;
+        }
+
+        #home>section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #intro-text {
+            font-family: "Playwrite IN", cursive;
+            text-align: center;
+            width: 330px;
+            height: 100px;
+            padding: 50px 0;
+        }
+
         #contact {
-            justify-content: center;
-            flex-direction: column;
+            justify-content: space-evenly;
+            flex-direction: row;
         }
 
         a {
             text-decoration: none;
             display: flex;
-        }
-
-        h2 {
-            text-align: center;
         }
 
         .nav-wrapper {
@@ -66,8 +82,11 @@
         }
 
         .profile {
-            width: 20%;
+            width: 140px;
+            height: 190px;
             align-self: center;
+            border-radius: 10%;
+            margin-right: 80px;
         }
 
         #myBtn {
@@ -89,9 +108,61 @@
             border: 1px black solid;
             border-radius: 10px;
             padding: 1px 2px 1px 2px;
-            margin-left: 1px;
-            margin-right: 1px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 5px;
+            width: 100px;
 
+        }
+
+        .soft-skills-list {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            align-items: center;
+            padding-left: 0;
+        }
+
+        .soft-skills-list>li {
+            background-color: lightgrey;
+            border: 1px black solid;
+            border-radius: 10px;
+            padding: 1px 2px 1px 2px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 20px;
+            width: 150px;
+        }
+
+        #skills>div {
+            width: 300px;
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+
+        #legend>div {
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        #legend>span {
+            font-size: small;
+        }
+
+        #good-skills>li {
+            background-color: lightgreen;
+        }
+
+        #medium-skills>li {
+            background-color: yellow;
+        }
+
+        #beginner-skills>li {
+            background-color: lightblue;
         }
     </style>
 </head>
@@ -118,53 +189,71 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 
-    <div style="background-color: lightcoral;" id="home" class="content">
-        <h2>Welcome to my site!</h2>
-        <!-- <img class="profile" src="./logo/profile.jfif" alt="image here" /> -->
-        <p style="text-align: justify;">I am a full stack developer with over 3 year experience in Web development,
+    <div id="home" class="content">
+        <section>
+            <h2 id="intro-text">
+                Hi there and welcome! I'm Bogdan.
+            </h2>
+            <img class=" profile" src="./logo/profile.jfif" alt="image here" />
+        </section>
+        <p style="text-align: justify; padding-left: 30px; padding-right: 30px;">I am a full stack developer with over 3
+            year experience in Web development,
             passionate about technology and coding, eager to contribute to exciting projects and improve constantly.
         </p>
-        <p><b>Skills:</b>
-        <div style="display: flex; flex-direction: row; align-items: center;">
-            <img style="width: 54px; height: 50px;" src="./logo/big_smile.png" alt="big_smile">
-            <ul class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
-                <li>JS(ES6)/TS</li>
-                <li>HTML5</li>
-                <li>CSS</li>
-                <li>React</li>
-                <li>NestJs</li>
-                <li>Websockets</li>
-                <li>Jest</li>
-                <li>SQL</li>
-                <li>Docker</li>
-                <li>Git</li>
-                <li>Ensligh C1</li>
-                <li>Communication</li>
-            </ul>
-        </div>
-        <div style="display: flex; flex-direction: row; align-items: center;">
-            <img style="width: 50px; height: 50px;" src="./logo/smile.png" alt="smile">
-            <ul class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
-                <li>Python</li>
-                <li>Django</li>
-                <li>Vue3</li>
-                <li>MongoDb</li>
-                <li>Docker</li>
-                <li>RabbitMQ</li>
-                <li>gRPC</li>
-                <li>Cypress</li>
-                <li>Linux</li>
-                <li>C/C++</li>
-                <li>Presentation</li>
-            </ul>
-        </div>
-        <div style="display: flex; flex-direction: row; align-items: center;">
-            <img style="width: 50px; height: 50px;" src="./logo/serious.png" alt="serious">
-            <ul class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
-                <li>AWS</li>
-            </ul>
-        </div>
-        </p>
+        <br><br>
+        <section id="skills" style="display: flex; flex-direction: row;">
+            <div>
+                <div style="font-size: 30px;">Tech skills</div>
+                <hr>
+                <div id="legend" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                    <div style="background-color: lightgreen;"></div> <span> over 3 years</span>
+                    <div style="background-color: yellow;"></div> <span> 1 - 2 years</span>
+                    <div style="background-color: lightblue;"></div> <span> less than 1 year </span>
+                </div>
+                <ul id="good-skills" class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>React</li>
+                    <li>NestJs</li>
+                    <li>Python</li>
+                    <li>Git</li>
+                    <li>SQL</li>
+                    <li>Linux</li>
+                </ul>
+                <ul id="medium-skills" class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
+                    <li>Nodejs</li>
+                    <li>Docker</li>
+                    <li>Websockets</li>
+                    <li>Jest</li>
+                    <li>Docker</li>
+                    <li>Django</li>
+                    <li>Vue3</li>
+                    <li>MongoDb</li>
+                    <li>C/C++</li>
+                </ul>
+                <ul id="beginner-skills" class="skills-list" style="display: flex; flex-wrap: wrap; list-style: none;">
+                    <li>RabbitMQ</li>
+                    <li>gRPC</li>
+                    <li>Cypress</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+            <div>
+                <div style="font-size: 30px;">Soft skills</div>
+                <hr><br>
+                <ul class="soft-skills-list">
+                    <li>Ensligh C1</li>
+                    <li>Communication</li>
+                    <li>Collaboration</li>
+                    <li>Adaptability</li>
+                    <li>Team work</li>
+                    <li>Problem solving</li>
+                    <li>Creativity</li>
+                </ul>
+            </div>
+        </section>
     </div>
     <div id="experience" class="content">
         <h3 style="border-bottom: 1px black solid;">Software engineer at Betfair Romania Development (Flutter
@@ -210,9 +299,19 @@
         <p style="margin-top: 0;">Mathematics-informatics profile (2013-2017)</p>
     </div>
     <div id="contact" class="content">
-        <p><b>Email:</b> utility.email.bba@gmail.com
-        </p>
-        <p><a href="https://www.linkedin.com/in/bogdan-ban-90aa59159/" target="_blank"> <b>Linkedin</b></a></p>
+        <img style="width: 85.73px; height: 110px; border-radius: 20px; cursor: pointer;" onclick="sendEmail()"
+            src="./logo/gmail.png">
+        <div style="padding-top: 5px;">
+            <a href="https://www.linkedin.com/in/bogdan-ban-90aa59159/" target="_blank">
+                <i style="font-size:100px" class="fa">&#xf08c;
+                </i>
+            </a>
+        </div>
+        <div>
+            <a href="https://github.com/BogdanBBAANN" target="_blank">
+                <i style="font-size:100px; color: black;" class="fa">&#xf09b;</i>
+            </a>
+        </div>
     </div>
 
     <script>
@@ -221,6 +320,10 @@
         let mybutton = document.getElementById("myBtn");
 
         window.onscroll = function () { scrollFunction() };
+
+        function sendEmail() {
+            window.location = "mailto:utility.email.bba@gmail.com";
+        }
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
