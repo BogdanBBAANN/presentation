@@ -268,6 +268,14 @@
         #bike-description {
             z-index: 999;
         }
+
+        #first-2-hobbies,
+        #second-2-hobbies {
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+                width: 100vw;
+            }
+        }
     </style>
 </head>
 
@@ -417,7 +425,7 @@
         </div>
     </div>
     <div id="hobbies" class="content">
-        <div>
+        <div id="first-2-hobbies">
             <div class="container">
                 <img src="./logo/bike.jpeg">
                 <div class="middle bike">
@@ -432,7 +440,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div id="second-2-hobbies">
             <div class="container">
 
                 <img src="./logo/ski.jpeg">
