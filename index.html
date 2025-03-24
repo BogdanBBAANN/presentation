@@ -228,6 +228,10 @@
         .container {
             position: relative;
             text-align: center;
+
+            @media only screen and (max-width: 600px) {
+                width: fit-content;
+            }
         }
 
         .container>img {
@@ -273,7 +277,8 @@
         #second-2-hobbies {
             @media only screen and (max-width: 600px) {
                 flex-direction: column;
-                width: 100vw;
+                width: fit-content;
+
             }
         }
     </style>
